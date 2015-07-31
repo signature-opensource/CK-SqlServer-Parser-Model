@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CK.SqlServer.Parser.Model", "CK.SqlServer.Parser.Model\CK.SqlServer.Parser.Model.csproj", "{1D1C5311-2B86-4039-ACFA-050C3B405433}"
 EndProject
+Project("{E09DD79A-4488-4AB9-8D3F-A7EEE78BF432}") = "CK.SqlServer.Parser.Model.nuget", "CK.SqlServer.Parser.Model.nuget\CK.SqlServer.Parser.Model.nuget.nuproj", "{BB18E842-C5F0-40D7-B534-0459E66F92BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1D1C5311-2B86-4039-ACFA-050C3B405433}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D1C5311-2B86-4039-ACFA-050C3B405433}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D1C5311-2B86-4039-ACFA-050C3B405433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB18E842-C5F0-40D7-B534-0459E66F92BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB18E842-C5F0-40D7-B534-0459E66F92BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB18E842-C5F0-40D7-B534-0459E66F92BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB18E842-C5F0-40D7-B534-0459E66F92BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

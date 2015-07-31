@@ -50,6 +50,10 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="ISqlServerFunctionInlineTable.cs" />
+    <Compile Include="ISqlServerFunctionTable.cs" />
+    <Compile Include="ISqlServerFunctionScalar.cs" />
+    <Compile Include="ISqlServerView.cs" />
     <Compile Include="ISqlServerStoredProcedure.cs" />
     <Compile Include="ISqlServerObject.cs" />
     <Compile Include="ISqlServerParameter.cs" />
