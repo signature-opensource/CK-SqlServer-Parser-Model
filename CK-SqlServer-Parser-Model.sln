@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CK.SqlServer.Parser.Model", "CK.SqlServer.Parser.Model\CK.SqlServer.Parser.Model.csproj", "{1D1C5311-2B86-4039-ACFA-050C3B405433}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE975E91-399A-4FCE-80F2-AF03FF69A225}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Releaser", "Releaser\Releaser.csproj", "{1389091D-C006-458F-A760-44B2AAFFCFCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{1D1C5311-2B86-4039-ACFA-050C3B405433}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D1C5311-2B86-4039-ACFA-050C3B405433}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D1C5311-2B86-4039-ACFA-050C3B405433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1389091D-C006-458F-A760-44B2AAFFCFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1389091D-C006-458F-A760-44B2AAFFCFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1389091D-C006-458F-A760-44B2AAFFCFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1389091D-C006-458F-A760-44B2AAFFCFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
