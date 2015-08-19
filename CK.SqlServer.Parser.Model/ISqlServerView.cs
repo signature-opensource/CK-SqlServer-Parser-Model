@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CK.SqlServer.Parser
 {
     /// <summary>
-    /// 
+    /// Defines a view.
     /// </summary>
     public interface ISqlServerView : ISqlServerObject
     {

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CK.SqlServer.Parser
 {
+    /// <summary>
+    /// A read-only list of <see cref="ISqlServerParameter"/>.
+    /// </summary>
     public interface ISqlServerParameterList : IReadOnlyList<ISqlServerParameter>
     {
         /// <summary>

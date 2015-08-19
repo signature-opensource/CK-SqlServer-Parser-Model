@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CK.SqlServer.Parser
 {
     /// <summary>
-    /// Objects that can be called have parameters.
+    /// Generalizes objects that can be called: they all have parameters.
     /// </summary>
     public interface ISqlServerCallableObject : ISqlServerObject
     {

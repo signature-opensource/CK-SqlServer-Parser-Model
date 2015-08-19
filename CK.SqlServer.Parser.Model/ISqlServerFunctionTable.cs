@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CK.SqlServer.Parser
 {
+    /// <summary>
+    /// Defines multi-statements function table.
+    /// </summary>
     public interface ISqlServerFunctionTable : ISqlServerCallableObject
     {
     }

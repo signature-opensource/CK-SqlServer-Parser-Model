@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CK.SqlServer.Parser
 {
+    /// <summary>
+    /// Defines an inline function table.
+    /// </summary>
     public interface ISqlServerFunctionInlineTable : ISqlServerCallableObject
     {
     }

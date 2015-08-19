@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>CK.SqlServer.Parser.Model</id>
+    <version>{version}</version>
+    <authors>Invenietis</authors>
+    <owners>Invenietis</owners>
+    <copyright>Invenietis</copyright>
+    <projectUrl>https://bitbucket.com/</projectUrl>
+    <summary>Abstract definitions of T-Sql stored procedure and functions headers.</summary>
+    <description>
+	Provides an abstractions of T-Sql objects definitions.
+    </description>
+    <language>en-US</language>
+    <dependencies>
+      <dependency id="CK.Core" version="4.2.0" />
+    </dependencies>
+  </metadata>
+  <files>	
+	<file src="CK.SqlServer.Parser.Model\bin\Release\CK.SqlServer.Parser.Model.dll" target="lib\net45" />		
+	<file src="CK.SqlServer.Parser.Model\bin\Release\CK.SqlServer.Parser.Model.xml" target="lib\net45" />		
+  </files>
+</package>

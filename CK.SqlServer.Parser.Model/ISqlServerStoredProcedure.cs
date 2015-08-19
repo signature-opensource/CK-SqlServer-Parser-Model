@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CK.SqlServer.Parser
 {
+    /// <summary>
+    /// Defines a stored procedure.
+    /// </summary>
     public interface ISqlServerStoredProcedure : ISqlServerCallableObject
     {
     }

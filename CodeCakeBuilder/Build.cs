@@ -22,17 +22,15 @@ namespace CodeCake
             var securePath = Cake.Argument( "securePath", "../../_Secure" );
             var secureDir = Cake.Directory( securePath );
 
-            var nugetOutputDir = Cake.Directory( "CodeCake/Release" );
+            var nugetOutputDir = Cake.Directory( "CodeCakeBuilder/Release" );
             SimpleRepositoryInfo gitInfo = null;
             SignToolSignSettings signSettingsForRelease = null;
-
-            // Define directories.
-            var buildDir = Cake.Directory( "CK.SqlServer.Parser.Model/bin" ) + Cake.Directory( configuration );
 
             Task( "Clean" )
                 .Does( () =>
                 {
-                    Cake.CleanDirectory( buildDir );
+                    Cake.CleanDirectory( Cake.Directory( "CK.SqlServer.Parser.Model/bin" ) + Cake.Directory( configuration ) );
+                    Cake.CleanDirectory( Cake.Directory( "CK.SqlServer.Parser.Model/obj" ) + Cake.Directory( configuration ) );
                 } );
 
             Task( "Restore-NuGet-Packages" )
@@ -43,13 +41,15 @@ namespace CodeCake
                 } );
 
             Task( "Build" )
+                .IsDependentOn( "Check-Publish" )
                 .IsDependentOn( "Restore-NuGet-Packages" )
                 .Does( () =>
                 {
                     Cake.MSBuild( "CK.SqlServer.Parser.Model/CK.SqlServer.Parser.Model.csproj", new MSBuildSettings()
                         .UseToolVersion( MSBuildToolVersion.NET45 )
                         .SetVerbosity( Verbosity.Normal )
-                        .SetConfiguration( configuration ) );
+                        .SetConfiguration( configuration )
+                        .SetNodeReuse( false ) );
                 } );
 
             Task( "Check-Publish" )
@@ -76,7 +76,6 @@ namespace CodeCake
 
             Task( "Sign-Authenticode" )
                 .IsDependentOn( "Build" )
-                .IsDependentOn( "Check-Publish" )
                 .WithCriteria( () => signSettingsForRelease != null )
                 .Does( () =>
                 {
@@ -94,7 +93,7 @@ namespace CodeCake
                         Cake.Sign( "CK.SqlServer.Parser.Model/bin/Release/CK.SqlServer.Parser.Model.dll", signSettingsForRelease );
                     }
                     Cake.CreateDirectory( nugetOutputDir );
-                    Cake.NuGetPack( "CodeCake/CK.SqlServer.Parser.Model.nuspec", new NuGetPackSettings()
+                    Cake.NuGetPack( "CodeCakeBuilder/CK.SqlServer.Parser.Model.nuspec", new NuGetPackSettings()
                     {
                         Version = gitInfo.NuGetVersion,
                         BasePath = Cake.Environment.WorkingDirectory,
