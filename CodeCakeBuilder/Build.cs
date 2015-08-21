@@ -31,6 +31,7 @@ namespace CodeCake
                 {
                     Cake.CleanDirectory( Cake.Directory( "CK.SqlServer.Parser.Model/bin" ) + Cake.Directory( configuration ) );
                     Cake.CleanDirectory( Cake.Directory( "CK.SqlServer.Parser.Model/obj" ) + Cake.Directory( configuration ) );
+                    Cake.CleanDirectory( nugetOutputDir );
                 } );
 
             Task( "Restore-NuGet-Packages" )
@@ -63,6 +64,7 @@ namespace CodeCake
                         // If the release is a not a CI build, we must sign the artifacts before packaging.
                         if( gitInfo.IsValidRelease )
                         {
+                            if( configuration != "Release" ) throw new Exception( "A release version must be published in 'Release' configuration!" );
                             signSettingsForRelease = new SignToolSignSettings()
                             {
                                 TimeStampUri = new Uri( "http://timestamp.verisign.com/scripts/timstamp.dll" ),
@@ -88,10 +90,6 @@ namespace CodeCake
                 .IsDependentOn( "Sign-Authenticode" )
                 .Does( () =>
                 {
-                    if( signSettingsForRelease != null )
-                    {
-                        Cake.Sign( "CK.SqlServer.Parser.Model/bin/Release/CK.SqlServer.Parser.Model.dll", signSettingsForRelease );
-                    }
                     Cake.CreateDirectory( nugetOutputDir );
                     Cake.NuGetPack( "CodeCakeBuilder/CK.SqlServer.Parser.Model.nuspec", new NuGetPackSettings()
                     {
@@ -105,14 +103,14 @@ namespace CodeCake
                 .IsDependentOn( "Create-NuGet-Package" )
                 .Does( () =>
                 {
+                    var settings = new NuGetPushSettings()
+                    {
+                        ApiKey = System.IO.File.ReadAllText( secureDir + Cake.File( "NuGet-Push-ApiKey.txt" ) ),
+                        Verbosity = NuGetVerbosity.Detailed,
+                        Source = "http://proget.app.invenietis.net/nuget/Default"
+                    };
                     foreach( var f in Cake.GetFiles( nugetOutputDir.Path.FullPath + "/*.nupkg" ) )
                     {
-                        var settings = new NuGetPushSettings()
-                        {
-                            ApiKey = System.IO.File.ReadAllText( secureDir + Cake.File( "NuGet-Push-ApiKey.txt" ) ),
-                            Verbosity = NuGetVerbosity.Detailed,
-                            Source = "http://proget.app.invenietis.net/nuget/Default"
-                        };
                         Cake.NuGetPush( f, settings );
                     }
                 } );
