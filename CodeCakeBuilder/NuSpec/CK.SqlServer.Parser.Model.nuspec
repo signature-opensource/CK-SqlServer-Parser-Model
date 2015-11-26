@@ -17,7 +17,7 @@
     </dependencies>
   </metadata>
   <files>	
-	<file src="CK.SqlServer.Parser.Model\bin\Release\CK.SqlServer.Parser.Model.dll" target="lib\net45" />		
-	<file src="CK.SqlServer.Parser.Model\bin\Release\CK.SqlServer.Parser.Model.xml" target="lib\net45" />		
+	  <file src="CK.SqlServer.Parser.Model\bin\{{configuration}}\CK.SqlServer.Parser.Model.dll" target="lib\net45" />		
+	  <file src="CK.SqlServer.Parser.Model\bin\{{configuration}}\CK.SqlServer.Parser.Model.xml" target="lib\net45" />		
   </files>
 </package>
