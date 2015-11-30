@@ -2,11 +2,11 @@
 <package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>CK.SqlServer.Parser.Model</id>
-    <version>{version}</version>
+    <version>$version$</version>
     <authors>Invenietis</authors>
     <owners>Invenietis</owners>
     <copyright>Invenietis</copyright>
-    <projectUrl>https://bitbucket.com/</projectUrl>
+    <projectUrl>https://bitbucket.org/olivier_spinelli/ck-sqlserver-parser-model</projectUrl>
     <summary>Abstract definitions of T-Sql stored procedure and functions headers.</summary>
     <description>
 	Provides an abstractions of T-Sql objects definitions.
