@@ -27,5 +27,12 @@ namespace CK.SqlServer.Parser
         /// <param name="withOptions">True to obtain object options if any.</param>
         /// <returns>The object header.</returns>
         string ToStringSignature( bool withOptions );
+
+        /// <summary>
+        /// Writes full object text to a StringBuilder.
+        /// </summary>
+        /// <param name="b">The StringBuilder to write to.</param>
+        void Write( StringBuilder b );
+
     }
 }

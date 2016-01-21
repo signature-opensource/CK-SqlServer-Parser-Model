@@ -53,6 +53,7 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="ISqlServerFunctionInlineTable.cs" />
+    <Compile Include="ISqlServerAlterOrCreateStatement.cs" />
     <Compile Include="ISqlServerFunctionTable.cs" />
     <Compile Include="ISqlServerFunctionScalar.cs" />
     <Compile Include="ISqlServerView.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="SqlServerObjectType.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Mode.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
