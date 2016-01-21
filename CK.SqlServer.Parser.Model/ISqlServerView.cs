@@ -9,7 +9,7 @@ namespace CK.SqlServer.Parser
     /// <summary>
     /// Defines a view.
     /// </summary>
-    public interface ISqlServerView : ISqlServerObject
+    public interface ISqlServerView : ISqlServerObject, ISqlServerAlterOrCreateStatement
     {
     }
 }
