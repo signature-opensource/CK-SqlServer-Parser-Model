@@ -27,7 +27,7 @@ namespace CK.SqlServer.Parser
         /// <summary>
         /// Gets a positive size if it is specified, 0 when not specified (see below), -1 for 'max' (like in nvarchar(max)) 
         /// and -2 when not applicable (for example when <see cref="DbType"/> is <see cref="SqlDbType.Int"/>).
-        /// When not specified (0), the actual value can be 1 or 30: in a data definition or variable declaration statement, the default length is 1. 
+        /// When not specified (0), the actual default value is 1 (in a data definition) or 30 (for variable declaration statement). 
         /// When using the CAST and CONVERT functions, the default length is 30.
         /// </summary>
         int SyntaxSize { get; }

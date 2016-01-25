@@ -9,7 +9,7 @@ namespace CK.SqlServer.Parser
     /// <summary>
     /// Supported by objects that can be created or altered.
     /// </summary>
-    public interface ISqlServerAlterOrCreateStatement
+    public interface ISqlServerAlterOrCreateStatement : ISqlServerObject
     {
         /// <summary>
         /// Gets whether this object is defined with a alter keyword.
@@ -19,10 +19,10 @@ namespace CK.SqlServer.Parser
         
         /// <summary>
         /// Returns a new <see cref="ISqlServerAlterOrCreateStatement"/> with "create" if <see cref="IsAlterKeyword"/>
-        /// is true, or an alter statement.
+        /// is true, or an "alter" statement otherwise.
         /// </summary>
         /// <returns>The same object with a changed create/alter keyword.</returns>
-        ISqlServerAlterOrCreateStatement ToggleKeyword();
+        ISqlServerAlterOrCreateStatement ToggleAlterKeyword();
 
     }
 }
