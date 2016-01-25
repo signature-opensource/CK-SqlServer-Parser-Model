@@ -17,7 +17,7 @@
   <Interface Name="CK.SqlServer.Parser.ISqlServerAlterOrCreateStatement">
     <Position X="3.75" Y="1.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISqlServerAlterOrCreateStatement.cs</FileName>
       <NewMemberFileName>ISqlServerFunctionTable.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -39,8 +39,8 @@
       <FileName>ISqlServerParameter.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="DefaultValue" />
       <Property Name="SqlType" />
+      <Property Name="DefaultValue" />
     </ShowAsAssociation>
   </Interface>
   <Interface Name="CK.SqlServer.Parser.ISqlServerParameterDefaultValue">
@@ -93,16 +93,6 @@
         <Point X="8.75" Y="6" />
       </Path>
     </InheritanceLine>
-    <InheritanceLine Type="CK.SqlServer.Parser.ISqlServerAlterOrCreateStatement" ManuallyRouted="true">
-      <Path>
-        <Point X="5" Y="3.305" />
-        <Point X="5" Y="3.859" />
-        <Point X="7.354" Y="3.859" Type="JumpStart" />
-        <Point X="7.521" Y="3.859" Type="JumpEnd" />
-        <Point X="8.75" Y="3.859" />
-        <Point X="8.75" Y="6" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISqlServerView.cs</FileName>
@@ -115,12 +105,6 @@
         <Point X="7.438" Y="2.997" />
         <Point X="7.438" Y="4.125" />
         <Point X="4.5" Y="4.125" />
-        <Point X="4.5" Y="4.5" />
-      </Path>
-    </InheritanceLine>
-    <InheritanceLine Type="CK.SqlServer.Parser.ISqlServerAlterOrCreateStatement" FixedFromPoint="true">
-      <Path>
-        <Point X="4.5" Y="3.305" />
         <Point X="4.5" Y="4.5" />
       </Path>
     </InheritanceLine>
