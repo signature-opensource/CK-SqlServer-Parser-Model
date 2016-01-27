@@ -67,10 +67,11 @@
     <Compile Include="ISqlServerParserError.cs" />
     <Compile Include="ISqlServerUnifiedTypeDecl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerExtension.cs" />
     <Compile Include="SqlServerObjectType.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mode.cd" />
+    <None Include="Model.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
