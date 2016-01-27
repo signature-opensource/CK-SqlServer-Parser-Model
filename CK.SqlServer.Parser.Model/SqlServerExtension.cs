@@ -10,7 +10,7 @@ namespace CK.SqlServer.Parser
     /// <summary>
     /// Defines extension methods on models.
     /// </summary>
-    static class SqlServerExtension
+    public static class SqlServerExtension
     {
         /// <summary>
         /// Returns the full text of this object.
