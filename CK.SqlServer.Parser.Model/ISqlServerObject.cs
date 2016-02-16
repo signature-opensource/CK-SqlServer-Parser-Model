@@ -17,6 +17,18 @@ namespace CK.SqlServer.Parser
         string ObjectName { get; }
 
         /// <summary>
+        /// Gets the schema of this object if there is one (null otherwise).
+        /// </summary>
+        string SchemaName { get; }
+
+        /// <summary>
+        /// Returns a new <see cref="ISqlServerObject"/> with the given schema name.
+        /// When null, the schema is removed.
+        /// </summary>
+        /// <returns>The same object with a changed schema name.</returns>
+        ISqlServerObject SetSchemaName( string name );
+
+        /// <summary>
         /// Gets the type of this object.
         /// </summary>
         SqlServerObjectType ObjectType { get; }
