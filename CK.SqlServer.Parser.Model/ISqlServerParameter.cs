@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CK.SqlServer.Parser
 {
+    /// <summary>
+    /// Modelizes a sql server parameter.
+    /// </summary>
     public interface ISqlServerParameter
     {
         /// <summary>

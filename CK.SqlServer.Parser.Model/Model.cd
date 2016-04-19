@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Interface Name="CK.SqlServer.Parser.ISqlServerFunctionInlineTable">
-    <Position X="0.5" Y="6" Width="2.25" />
+    <Position X="5.25" Y="6" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISqlServerFunctionInlineTable.cs</FileName>
@@ -25,7 +25,7 @@
   <Interface Name="CK.SqlServer.Parser.ISqlServerObject">
     <Position X="7" Y="1.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAIAAAAUAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAIQAAAUAQAA=</HashCode>
       <FileName>ISqlServerObject.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -72,7 +72,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="CK.SqlServer.Parser.ISqlServerStoredProcedure">
-    <Position X="5.25" Y="6" Width="2.25" />
+    <Position X="0.5" Y="6" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISqlServerStoredProcedure.cs</FileName>
@@ -86,31 +86,32 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="CK.SqlServer.Parser.ISqlServerView">
-    <Position X="7.75" Y="6" Width="2" />
-    <InheritanceLine Type="CK.SqlServer.Parser.ISqlServerObject" FixedFromPoint="true">
-      <Path>
-        <Point X="8.75" Y="2.997" />
-        <Point X="8.75" Y="6" />
-      </Path>
-    </InheritanceLine>
+    <Position X="8.25" Y="4.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISqlServerView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CK.SqlServer.Parser.ISqlServerCallableObject" Collapsed="true">
-    <Position X="3.25" Y="4.5" Width="2.5" />
-    <InheritanceLine Type="CK.SqlServer.Parser.ISqlServerObject" ManuallyRouted="true" FixedFromPoint="true">
-      <Path>
-        <Point X="7.438" Y="2.997" />
-        <Point X="7.438" Y="4.125" />
-        <Point X="4.5" Y="4.125" />
-        <Point X="4.5" Y="4.5" />
-      </Path>
-    </InheritanceLine>
+    <Position X="3.25" Y="4.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>ISqlServerCallableObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CK.SqlServer.Parser.ISqlServerFunctionTable">
+    <Position X="7.75" Y="6" Width="2" />
+    <InheritanceLine Type="CK.SqlServer.Parser.ISqlServerCallableObject" ManuallyRouted="true">
+      <Path>
+        <Point X="4.5" Y="5.07" />
+        <Point X="4.5" Y="5.686" />
+        <Point X="8.75" Y="5.686" />
+        <Point X="8.75" Y="6" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISqlServerFunctionTable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="CK.SqlServer.Parser.SqlServerObjectType">
