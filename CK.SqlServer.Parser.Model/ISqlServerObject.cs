@@ -7,26 +7,31 @@ using System.Threading.Tasks;
 namespace CK.SqlServer.Parser
 {
     /// <summary>
-    /// General object definition with an <see cref="ObjectName"/> and an <see cref="ObjectType"/>.
+    /// General object definition with a <see cref="SchemaName"/> and an <see cref="ObjectType"/>.
     /// </summary>
     public interface ISqlServerObject
     {
         /// <summary>
         /// Gets the name of this object, including its schema if any.
         /// </summary>
-        string ObjectName { get; }
+        string SchemaName { get; }
 
         /// <summary>
         /// Gets the schema of this object if there is one (null otherwise).
         /// </summary>
-        string SchemaName { get; }
+        string Schema { get; }
+
+        /// <summary>
+        /// Gets the schema of this object if there is one (null otherwise).
+        /// </summary>
+        string Name { get; }
 
         /// <summary>
         /// Returns a new <see cref="ISqlServerObject"/> with the given schema name.
         /// When null, the schema is removed.
         /// </summary>
         /// <returns>The same object with a changed schema name.</returns>
-        ISqlServerObject SetSchemaName( string name );
+        ISqlServerObject SetSchema( string name );
 
         /// <summary>
         /// Gets the type of this object.
