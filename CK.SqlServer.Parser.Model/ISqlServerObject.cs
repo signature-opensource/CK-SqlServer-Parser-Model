@@ -9,7 +9,7 @@ namespace CK.SqlServer.Parser
     /// <summary>
     /// General object definition with a <see cref="SchemaName"/> and an <see cref="ObjectType"/>.
     /// </summary>
-    public interface ISqlServerObject
+    public interface ISqlServerObject : ISqlServerParsedText
     {
         /// <summary>
         /// Gets the name of this object, including its schema if any.
@@ -44,12 +44,6 @@ namespace CK.SqlServer.Parser
         /// <param name="withOptions">True to obtain object options if any.</param>
         /// <returns>The object header.</returns>
         string ToStringSignature( bool withOptions );
-
-        /// <summary>
-        /// Writes full object text to a StringBuilder.
-        /// </summary>
-        /// <param name="b">The StringBuilder to write to.</param>
-        void Write( StringBuilder b );
 
     }
 }

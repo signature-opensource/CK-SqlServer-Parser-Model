@@ -13,7 +13,7 @@
     </description>
     <language>en-US</language>
     <dependencies>
-      <dependency id="CK.ActivityMonitor.StandardSender" version="5.0.0-d03" />
+      <dependency id="CK.ActivityMonitor.StandardSender" version="5.0.0-e01" />
     </dependencies>
   </metadata>
   <files>	
