@@ -26,6 +26,13 @@ namespace CK.SqlServer.Parser
         ISqlServerParserResult<ISqlServerScript> ParseScript( string text );
 
         /// <summary>
+        /// Parses the text and tries to extract a <see cref="ISqlServerTransformer"/> from it.
+        /// </summary>
+        /// <param name="text">The text to parse.</param>
+        /// <returns>A result object.</returns>
+        ISqlServerParserResult<ISqlServerTransformer> ParseTransformer( string text );
+
+        /// <summary>
         /// Parses the text and tries to extract a <see cref="ISqlServerObject"/> from it.
         /// </summary>
         /// <param name="text">The text to parse.</param>
