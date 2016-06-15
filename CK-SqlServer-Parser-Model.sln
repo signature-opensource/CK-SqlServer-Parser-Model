@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CK.SqlServer.Parser.Model", "CK.SqlServer.Parser.Model\CK.SqlServer.Parser.Model.csproj", "{1D1C5311-2B86-4039-ACFA-050C3B405433}"
 EndProject
@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
+		nuget.config = nuget.config
 		RepositoryInfo.xml = RepositoryInfo.xml
 		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
 		SharedKey.snk = SharedKey.snk
