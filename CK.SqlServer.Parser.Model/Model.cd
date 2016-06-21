@@ -84,7 +84,7 @@
   <Interface Name="CK.SqlServer.Parser.ISqlServerParser">
     <Position X="0.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>QAAgAAAAAEEAAACABAAAAAAAAAAAAAAAAAIAAAAAAAE=</HashCode>
+      <HashCode>SAAgAAAAAEEAAACABAAAAAAAAAAAAAAAAAIAAAAAAAE=</HashCode>
       <FileName>ISqlServerParser.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -164,7 +164,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISqlServerTransformer.cs</FileName>
       <NewMemberFileName>ISqlServerScript.cs</NewMemberFileName>
     </TypeIdentifier>
