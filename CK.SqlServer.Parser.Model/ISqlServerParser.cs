@@ -40,6 +40,13 @@ namespace CK.SqlServer.Parser
         ISqlServerParserResult<ISqlServerObject> ParseObject( string text );
 
         /// <summary>
+        /// Parses the text and tries to extract a <see cref="ISqlServerView"/> from it.
+        /// </summary>
+        /// <param name="text">The text to parse.</param>
+        /// <returns>A result object.</returns>
+        ISqlServerParserResult<ISqlServerView> ParseView( string text );
+
+        /// <summary>
         /// Parses the text and tries to extract a <see cref="ISqlServerStoredProcedure"/> from it.
         /// </summary>
         /// <param name="text">The text to parse.</param>

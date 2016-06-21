@@ -12,7 +12,7 @@ namespace CK.SqlServer.Parser
     public interface ISqlServerParsedText
     {
         /// <summary>
-        /// Gets the comments that occur before the first token.
+        /// Gets the comments that appear before the first token.
         /// </summary>
         IEnumerable<ISqlServerComment> HeaderComments { get; }
 
