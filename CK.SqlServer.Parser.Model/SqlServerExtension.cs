@@ -18,7 +18,7 @@ namespace CK.SqlServer.Parser
         /// </summary>
         /// <param name="this">This object.</param>
         /// <returns>The full text.</returns>
-        static public string ToFullString( this ISqlServerObject @this )
+        static public string ToFullString( this ISqlServerParsedText @this )
         {
             StringBuilder b = new StringBuilder();
             @this.Write( b );
