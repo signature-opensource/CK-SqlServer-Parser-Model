@@ -9,7 +9,7 @@ namespace CK.SqlServer.Parser
     /// <summary>
     /// Generalizes objects that can be called: they all have parameters.
     /// </summary>
-    public interface ISqlServerCallableObject : ISqlServerObject, ISqlServerAlterOrCreateStatement
+    public interface ISqlServerCallableObject : ISqlServerAlterOrCreateStatement
     {
         /// <summary>
         /// Gets the parameters.

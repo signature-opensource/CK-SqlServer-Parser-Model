@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace CK.SqlServer.Parser
 {
     /// <summary>
-    /// Defines a view.
+    /// A script contains one or more statements, 'GO' being considered as a statement like any other.
     /// </summary>
-    public interface ISqlServerView : ISqlServerAlterOrCreateStatement
+    public interface ISqlServerScript : ISqlServerParsedText
     {
     }
 }
