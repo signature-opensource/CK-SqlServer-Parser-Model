@@ -14,9 +14,18 @@ namespace CK.SqlServer.Parser
     {
         /// <summary>
         /// Gets the optional target schema name.
-        /// Can be null.
+        /// Just like <see cref="ISqlServerObject.SchemaName"/>, this is not escaped.
+        /// Can be null for an unscoped transformer.
         /// </summary>
         string TargetSchemaName { get; }
+
+        /// <summary>
+        /// Gets the optional name of this transformer (null for an anonymous transformer).
+        /// Transformer's name use the same syntax as actual <see cref="ISqlServerObject"/> for consistency.
+        /// Just like <see cref="ISqlServerObject.SchemaName"/>, this is not escaped, but please,
+        /// do not use quoted identifiers for transformers!
+        /// </summary>
+        string SchemaName { get; }
 
         /// <summary>
         /// Applies this transformation to an object.

@@ -13,6 +13,7 @@ namespace CK.SqlServer.Parser
     {
         /// <summary>
         /// Parses the text and tries to extract any <see cref="ISqlServerParsedText"/> from it.
+        /// This method detects the actual type of the object.
         /// </summary>
         /// <param name="text">The text to parse.</param>
         /// <returns>A result object.</returns>

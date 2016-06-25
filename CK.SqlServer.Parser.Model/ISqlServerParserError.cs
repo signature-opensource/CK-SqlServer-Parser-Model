@@ -4,7 +4,7 @@ using CK.Core;
 namespace CK.SqlServer.Parser
 {
     /// <summary>
-    /// Captures parsing error.
+    /// Captures parsing error or sucessful <see cref="Result"/>.
     /// </summary>
     public interface ISqlServerParserResult<T> where T : class, ISqlServerParsedText
     {

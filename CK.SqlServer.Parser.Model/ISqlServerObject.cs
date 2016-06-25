@@ -12,17 +12,20 @@ namespace CK.SqlServer.Parser
     public interface ISqlServerObject : ISqlServerParsedText
     {
         /// <summary>
-        /// Gets the name of this object, including its schema if any.
+        /// Gets the name of this object, including its schema if any with no escaping:
+        /// for <c>[a [schema]]]  .   [name]</c> this will be "[a [schema]]].[name]".
         /// </summary>
         string SchemaName { get; }
 
         /// <summary>
         /// Gets the schema of this object if there is one (null otherwise).
+        /// This is the escaped schema: for <c>[a [schema]]]</c> this will be "a [schema]".
         /// </summary>
         string Schema { get; }
 
         /// <summary>
-        /// Gets the schema of this object if there is one (null otherwise).
+        /// Gets the ame of this object if there is one (null otherwise).
+        /// This is the escaped name: for <c>[a [name]]]</c> this will be "a [name]".
         /// </summary>
         string Name { get; }
 
