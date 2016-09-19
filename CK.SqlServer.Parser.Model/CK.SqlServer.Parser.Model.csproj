@@ -69,6 +69,7 @@
     <Compile Include="ISqlServerFunctionTable.cs" />
     <Compile Include="ISqlServerFunctionScalar.cs" />
     <Compile Include="ISqlServerComment.cs" />
+    <Compile Include="ISqlServerObjectOptions.cs" />
     <Compile Include="ISqlServerParsedText.cs" />
     <Compile Include="ISqlServerTransformer.cs" />
     <Compile Include="ISqlServerScript.cs" />
