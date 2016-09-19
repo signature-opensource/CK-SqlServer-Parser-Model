@@ -42,11 +42,17 @@ namespace CK.SqlServer.Parser
         SqlServerObjectType ObjectType { get; }
 
         /// <summary>
+        /// Gets the options of this object.
+        /// </summary>
+        ISqlServerObjectOptions Options { get; }
+
+        /// <summary>
         /// Writes the header of this object, optionally with its options.
         /// </summary>
         /// <param name="withOptions">True to obtain object options if any.</param>
         /// <returns>The object header.</returns>
         string ToStringSignature( bool withOptions );
+
 
     }
 }
