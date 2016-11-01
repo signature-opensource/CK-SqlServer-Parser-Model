@@ -32,7 +32,8 @@ namespace CK.SqlServer.Parser
         bool IsPureOutput { get; }
 
         /// <summary>
-        /// Gets whether the parameter is input and output (by ref). <see cref="IsOutput"/> is true: the parameter uses the '/*input*/output' syntax.
+        /// Gets whether the parameter is input and output (by ref). <see cref="IsOutput"/> is true: 
+        /// the parameter uses the '/*input*/output' syntax.
         /// </summary>
         bool IsInputOutput { get; }
 
