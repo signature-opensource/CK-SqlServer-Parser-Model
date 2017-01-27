@@ -33,3 +33,5 @@ Runtime/Current/
 CK-Database.Tests.VisualState.xml
 Tests/Logs/
 *GhostDoc.xml
+project.lock.json
+.vs/
