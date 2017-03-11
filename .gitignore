@@ -35,3 +35,4 @@ Tests/Logs/
 *GhostDoc.xml
 project.lock.json
 .vs/
+CodeCakeBuilder/Tools/
