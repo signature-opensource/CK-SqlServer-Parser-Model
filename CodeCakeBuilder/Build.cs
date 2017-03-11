@@ -116,7 +116,7 @@ namespace CodeCake
                 .IsDependentOn("Check-Repository")
                 .Does(() =>
                 {
-                    foreach (var p in projects)
+                    foreach (var p in projectsToPublish)
                     {
                         Cake.DotNetCoreBuild(p.Path.GetDirectory().FullPath,
                             new DotNetCoreBuildSettings().AddVersionArguments(gitInfo, s =>
@@ -131,7 +131,7 @@ namespace CodeCake
                 .Does(() =>
                {
                    Cake.CreateDirectory(releasesDir);
-                   foreach (SolutionProject p in projectsToPublish)
+                   foreach (SolutionProject p in projects)
                    {
                        Cake.Warning(p.Path.GetDirectory().FullPath);
                        var s = new DotNetCorePackSettings();
