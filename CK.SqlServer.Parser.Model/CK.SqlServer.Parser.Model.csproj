@@ -9,6 +9,9 @@
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <PackageId>CK.SqlServer.Parser.Model</PackageId>
+    <Description>
+      Abstractions of T-Sql objects definitions.
+    </Description>
     <PackageReleaseNotes>https://bitbucket.org/olivier_spinelli/ck-sqlserver-parser-model</PackageReleaseNotes>
     <PackageLicenseUrl>https://opensource.org/licenses/LGPL-3.0</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
@@ -22,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
-    <PackageReference Include="CK.ActivityMonitor.StandardSender" Version="6.0.0-a01" />
+    <PackageReference Include="CK.ActivityMonitor.StandardSender" Version="6.0.0" />
     <Reference Include="System.Data" />
     <Reference Include="System" />
   </ItemGroup>
