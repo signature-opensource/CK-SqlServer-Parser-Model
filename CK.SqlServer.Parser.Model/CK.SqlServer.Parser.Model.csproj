@@ -1,22 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="../Common/Shared.props" />
+  
   <PropertyGroup>
-    <Copyright>Copyright 2014-1017 Invenietis</Copyright>
-    <Authors>Invenietis</Authors>
     <TargetFrameworks>netstandard1.3;net451</TargetFrameworks>
-    <AssemblyName>CK.SqlServer.Parser.Model</AssemblyName>
-    <AssemblyOriginatorKeyFile>../SharedKey.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>CK.SqlServer.Parser.Model</PackageId>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.1</NetStandardImplicitPackageVersion>
     <Description>
       Abstractions of T-Sql objects definitions.
     </Description>
-    <PackageReleaseNotes>https://bitbucket.org/olivier_spinelli/ck-sqlserver-parser-model</PackageReleaseNotes>
-    <PackageLicenseUrl>https://opensource.org/licenses/LGPL-3.0</PackageLicenseUrl>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://bitbucket.org/olivier_spinelli/ck-sqlserver-parser-model</RepositoryUrl>
-    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.3' ">1.6.1</NetStandardImplicitPackageVersion>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">

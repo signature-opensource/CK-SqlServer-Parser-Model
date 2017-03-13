@@ -32,6 +32,7 @@ namespace CodeCake
             {
                 var prev = @this.ArgumentCustomization;
                 @this.ArgumentCustomization = args => (prev?.Invoke(args) ?? args)
+                        .Append($@"/p:CakeBuild=""true""")
                         .Append($@"/p:Version=""{info.NuGetVersion}""")
                         .Append($@"/p:AssemblyVersion=""{info.MajorMinor}.0""")
                         .Append($@"/p:FileVersion=""{info.FileVersion}""")
@@ -97,7 +98,6 @@ namespace CodeCake
                 .Does(() =>
                 {
                     Cake.CleanDirectories(projects.Select(p => p.Path.GetDirectory().Combine("bin")));
-                    Cake.CleanDirectories(projects.Select(p => p.Path.GetDirectory().Combine("obj")));
                     Cake.CleanDirectories(releasesDir);
                 });
 
@@ -108,7 +108,6 @@ namespace CodeCake
                    // https://docs.microsoft.com/en-us/nuget/schema/msbuild-targets
                    Cake.DotNetCoreRestore(new DotNetCoreRestoreSettings().AddVersionArguments(gitInfo));
                });
-
 
             Task("Build")
                 .IsDependentOn("Clean")
@@ -133,7 +132,6 @@ namespace CodeCake
                    Cake.CreateDirectory(releasesDir);
                    foreach (SolutionProject p in projects)
                    {
-                       Cake.Warning(p.Path.GetDirectory().FullPath);
                        var s = new DotNetCorePackSettings();
                        s.ArgumentCustomization = args => args.Append("--include-symbols");
                        s.NoBuild = true;
@@ -145,8 +143,8 @@ namespace CodeCake
                });
 
             Task("Push-NuGet-Packages")
-                .IsDependentOn("Create-NuGet-Packages")
                 .WithCriteria(() => gitInfo.IsValid)
+                .IsDependentOn("Create-NuGet-Packages")
                 .Does(() =>
                {
                    IEnumerable<FilePath> nugetPackages = Cake.GetFiles(releasesDir.Path + "/*.nupkg");
