@@ -53,6 +53,5 @@ namespace CK.SqlServer.Parser
         /// <returns>The object header.</returns>
         string ToStringSignature( bool withOptions );
 
-
     }
 }
