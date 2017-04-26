@@ -21,6 +21,7 @@ using Cake.Common.Tools.DotNetCore;
 using Cake.Common.Tools.DotNetCore.Pack;
 using Cake.Common.Tools.DotNetCore.Restore;
 using Cake.Common.Tools.DotNetCore.Build;
+using Cake.Common.Build;
 
 namespace CodeCake
 {
@@ -178,6 +179,10 @@ namespace CodeCake
                    {
                        Debug.Assert(gitInfo.IsValidCIBuild);
                        PushNuGetPackages("MYGET_CI_API_KEY", "https://www.myget.org/F/invenietis-ci/api/v2/package", nugetPackages);
+                   }
+                   if (Cake.AppVeyor().IsRunningOnAppVeyor)
+                   {
+                       Cake.AppVeyor().UpdateBuildVersion(gitInfo.NuGetVersion);
                    }
                });
 
