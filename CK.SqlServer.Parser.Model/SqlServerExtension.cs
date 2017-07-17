@@ -38,7 +38,7 @@ namespace CK.SqlServer.Parser
             object o = @this.Transform( monitor, target );
             if( o == null ) return null;
             T r = o as T;
-            if( r == null ) monitor.Error().Send( $"Transformation applied to {typeof( T ).Name} produced a {o.GetType().Name} object. Object's type should not be altered." );
+            if( r == null ) monitor.Error( $"Transformation applied to {typeof( T ).Name} produced a {o.GetType().Name} object. Object's type should not be altered." );
             return r;
         }
 
