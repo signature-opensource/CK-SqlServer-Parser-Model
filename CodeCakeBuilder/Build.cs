@@ -1,4 +1,4 @@
-﻿using Cake.Common;
+using Cake.Common;
 using Cake.Common.Solution;
 using Cake.Common.IO;
 using Cake.Common.Tools.NUnit;
@@ -97,9 +97,10 @@ namespace CodeCake
                 .IsDependentOn( "Check-Repository" )
                 .Does( () =>
                  {
-                     foreach( var p in projectsToPublish )
+                     using( var tempSln = Cake.CreateTemporarySolutionFile( solutionFileName ) )
                      {
-                         Cake.DotNetCoreBuild( p.Path.GetDirectory().FullPath,
+                         tempSln.ExcludeProjectsFromBuild( "CodeCakeBuilder" );
+                         Cake.DotNetCoreBuild( tempSln.FullPath.FullPath,
                              new DotNetCoreBuildSettings().AddVersionArguments( gitInfo, s =>
                              {
                                  s.Configuration = configuration;
