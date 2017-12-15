@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,17 +12,16 @@ namespace CK.SqlServer.Parser
     public interface ISqlServerAlterOrCreateStatement : ISqlServerObject
     {
         /// <summary>
-        /// Gets whether this object is defined with a alter keyword.
-        /// When false, it is a create statement.
+        /// Gets whether the <see cref="CreateOrAlterStatementPrefix"/> of this statement.
         /// </summary>
-        bool IsAlterKeyword { get; }
+        CreateOrAlterStatementPrefix StatementPrefix { get; }
         
         /// <summary>
-        /// Returns a new <see cref="ISqlServerAlterOrCreateStatement"/> with "create" if <see cref="IsAlterKeyword"/>
-        /// is true, or an "alter" statement otherwise.
+        /// Returns a new <see cref="ISqlServerAlterOrCreateStatement"/> with the specified prefix.
         /// </summary>
-        /// <returns>The same object with a changed create/alter keyword.</returns>
-        ISqlServerAlterOrCreateStatement ToggleAlterKeyword();
+        /// <param name="prefix">The new prefix.</param>
+        /// <returns>The same object with a changed statement prefix.</returns>
+        ISqlServerAlterOrCreateStatement WithStatementPrefix( CreateOrAlterStatementPrefix prefix );
 
     }
 }
