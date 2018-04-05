@@ -9,6 +9,6 @@
     <PackageReference Include="CK.ActivityMonitor.SimpleSender" Version="9.0.5-Cblank-0013" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="System.Data.SqlClient" Version="4.4.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.4.3" />
   </ItemGroup>
 </Project>
