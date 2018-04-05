@@ -1,19 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="../Common/Shared.props" />
-  
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <Description>Abstractions of T-Sql objects definitions.
     </Description>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="CK.ActivityMonitor.SimpleSender" Version="9.0.4" />
+    <PackageReference Include="CK.ActivityMonitor.SimpleSender" Version="9.0.5-Cblank-0011" />
   </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <PackageReference Include="System.Data.SqlClient" Version="4.4.2" />
   </ItemGroup>
-
 </Project>
