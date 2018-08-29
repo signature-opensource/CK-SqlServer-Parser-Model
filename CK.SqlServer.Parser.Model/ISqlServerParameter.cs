@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +17,7 @@ namespace CK.SqlServer.Parser
         bool IsPureInput { get; }
 
         /// <summary>
-        /// Gets whether the parameter is an input parameter or an output one with a /*input*/ tag.
+        /// Gets whether the parameter is an input parameter or an output one with a /*input*/ comment.
         /// </summary>
         bool IsInput { get; }
 
@@ -41,6 +41,11 @@ namespace CK.SqlServer.Parser
         /// Gets whether the parameter is read only.
         /// </summary>
         bool IsReadOnly { get; }
+
+        /// <summary>
+        /// Gets whether the parameter is marked with the '/*not null*/ comment.
+        /// </summary>
+        bool IsNotNull { get; }
 
         /// <summary>
         /// Gets the name of the parameter.
