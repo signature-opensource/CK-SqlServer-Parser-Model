@@ -36,3 +36,8 @@ Tests/Logs/
 project.lock.json
 .vs/
 CodeCakeBuilder/Tools/
+
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Rr]eleases/
