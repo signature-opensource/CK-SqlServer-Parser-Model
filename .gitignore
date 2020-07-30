@@ -42,3 +42,4 @@ CodeCakeBuilder/Tools/
 [Rr]elease/
 [Rr]eleases/
 CodeCakeBuilder/UnitTestsDone.*.txt
+$StObjGen/
