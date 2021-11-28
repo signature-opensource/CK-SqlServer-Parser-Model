@@ -39,7 +39,7 @@ CodeCakeBuilder/Tools/
 
 [Bb]in/
 [Oo]bj/
-[Rr]elease/
-[Rr]eleases/
 CodeCakeBuilder/UnitTestsDone.*.txt
 $StObjGen/
+CodeCakeBuilder/[Rr]elease/
+CodeCakeBuilder/[Rr]eleases/
