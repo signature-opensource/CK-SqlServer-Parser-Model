@@ -9,6 +9,6 @@
     <PackageReference Include="CK.ActivityMonitor.SimpleSender" Version="15.0.0-r06-02-0002-develop" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
   </ItemGroup>
 </Project>
