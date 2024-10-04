@@ -8,6 +8,6 @@
     <PackageReference Include="CK.ActivityMonitor.SimpleSender" Version="0.0.0--053buja-develop" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
   </ItemGroup>
 </Project>
