@@ -1,44 +1,43 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CK.SqlServer.Parser
+namespace CK.SqlServer.Parser;
+
+/// <summary>
+/// Defines the different types of Sql Server objects.
+/// </summary>
+public enum SqlServerObjectType
 {
     /// <summary>
-    /// Defines the different types of Sql Server objects.
+    /// Not a known type.
     /// </summary>
-    public enum SqlServerObjectType
-    {
-        /// <summary>
-        /// Not a known type.
-        /// </summary>
-        None,
+    None,
 
-        /// <summary>
-        /// Stored procedure.
-        /// </summary>
-        Procedure,
-        
-        /// <summary>
-        /// View.
-        /// </summary>
-        View,
+    /// <summary>
+    /// Stored procedure.
+    /// </summary>
+    Procedure,
 
-        /// <summary>
-        /// Scalar function.
-        /// </summary>
-        ScalarFunction,
+    /// <summary>
+    /// View.
+    /// </summary>
+    View,
 
-        /// <summary>
-        /// Inline table function.
-        /// </summary>
-        InlineTableFunction,
+    /// <summary>
+    /// Scalar function.
+    /// </summary>
+    ScalarFunction,
 
-        /// <summary>
-        /// Multi-statement table function.
-        /// </summary>
-        MultiStatementTableFunction
-    }
+    /// <summary>
+    /// Inline table function.
+    /// </summary>
+    InlineTableFunction,
+
+    /// <summary>
+    /// Multi-statement table function.
+    /// </summary>
+    MultiStatementTableFunction
 }

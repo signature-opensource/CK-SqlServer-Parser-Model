@@ -43,3 +43,7 @@ CodeCakeBuilder/UnitTestsDone.*.txt
 $StObjGen/
 CodeCakeBuilder/[Rr]elease/
 CodeCakeBuilder/[Rr]eleases/
+Tests/**/TestResult*.xml
+CodeCakeBuilder/MemoryKey.*.txt
+Tests/**/Logs/
+Tests/**/CKSetup-WorkingDir/

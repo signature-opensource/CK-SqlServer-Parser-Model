@@ -1,19 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CK.SqlServer.Parser
+namespace CK.SqlServer.Parser;
+
+/// <summary>
+/// Generalizes objects that can be called: they all have parameters.
+/// </summary>
+public interface ISqlServerCallableObject : ISqlServerAlterOrCreateStatement
 {
     /// <summary>
-    /// Generalizes objects that can be called: they all have parameters.
+    /// Gets the parameters.
     /// </summary>
-    public interface ISqlServerCallableObject : ISqlServerAlterOrCreateStatement
-    {
-        /// <summary>
-        /// Gets the parameters.
-        /// </summary>
-        ISqlServerParameterList Parameters { get; }
-    }
+    ISqlServerParameterList Parameters { get; }
 }
